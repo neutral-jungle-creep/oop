@@ -5,18 +5,21 @@ import random
 
 class Line:
     def __init__(self, a, b, c, d):
+        logger.info(f'вызов __init__ у класса {self.__class__.__name__}')
         self.sp = a, b
         self.ep = c, d
 
 
 class Rect:
     def __init__(self, a, b, c, d):
+        logger.info(f'вызов __init__ у класса {self.__class__.__name__}')
         self.sp = a, b
         self.ep = c, d
 
 
 class Ellipse:
     def __init__(self, a, b, c, d):
+        logger.info(f'вызов __init__ у класса {self.__class__.__name__}')
         self.sp = a, b
         self.ep = c, d
 
@@ -32,7 +35,6 @@ for _ in range(217):
     coord = rand()
     logger.info(f'получены случайные координаты {coord}')
     item = random.choice(classes)
-    logger.info(f'вызов __init__ у класса {item.__name__}')
     elements.append(item(*coord))
 
 for i in elements:
