@@ -25,14 +25,15 @@ def rand():
     return [random.randint(1, 100) for _ in range(4)]
 
 
+classes = [Line, Rect, Ellipse]
 elements = []
 
 for _ in range(217):
     coord = rand()
     logger.info(f'получены случайные координаты {coord}')
-    item = random.choice([Line(*coord), Rect(*coord), Ellipse(*coord)])
-    logger.info(f'вызов __init__ у класса {item.__class__.__name__}')
-    elements.append(item)
+    item = random.choice(classes)
+    logger.info(f'вызов __init__ у класса {item.__name__}')
+    elements.append(item(*coord))
 
 for i in elements:
     if i.__class__.__name__ == 'Line':
