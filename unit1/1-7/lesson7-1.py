@@ -1,4 +1,4 @@
-'''https://stepik.org/lesson/701976/step/10?unit=702077'''
+'''https://stepik.org/lesson/701978/step/7?unit=702079'''
 from loguru import logger
 
 
