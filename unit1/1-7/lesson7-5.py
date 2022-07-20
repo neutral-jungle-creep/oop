@@ -20,10 +20,11 @@ class AppStore:
         logger.info(f'Вызов block_application')
         app.blocked = True
 
-    def total_apps(self):
+    @classmethod
+    def total_apps(cls):
         '''Возвращает общее число приложений в магазине.'''
         logger.info(f'Вызов total_apps')
-        return len(self.applications)
+        return len(cls.applications)
 
 
 class Application:
@@ -35,4 +36,6 @@ class Application:
 store = AppStore()
 app_youtube = Application("Youtube")
 store.add_application(app_youtube)
+print(store.total_apps())
 store.remove_application(app_youtube)
+print(store.total_apps())
