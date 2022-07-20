@@ -15,7 +15,8 @@ class AppStore:
         logger.info(f'Вызов remove_application')
         self.applications.remove(app)
 
-    def block_application(self, app):
+    @staticmethod
+    def block_application(app):
         '''Блокировка приложения.'''
         logger.info(f'Вызов block_application')
         app.blocked = True
