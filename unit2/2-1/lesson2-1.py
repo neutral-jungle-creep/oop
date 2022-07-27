@@ -4,7 +4,8 @@ from loguru import logger
 
 class Clock:
     def __init__(self, time=0):
-        self.__time = time
+        if Clock.check_time(time):
+            self.__time = time
 
     def set_time(self, tm):
         if Clock.check_time(tm):
